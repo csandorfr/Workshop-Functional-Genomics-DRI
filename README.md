@@ -6,7 +6,6 @@ This repository contains all the material regarding the Functional Genomics Work
 
 * the material and the code of 5 of 6 Demos: DAPPLE, GONet, FUMA, PLN
 * the slides:  `Workshop_Functional_Genomics_28_02_2019.pptx`
-* the articles listed in this worskhop (PMID used as name): references 
 
 ## DAPPLE: Protein-Protein Interactions Network
 
@@ -39,8 +38,8 @@ To run FUMA, you will need to open this URL https://fuma.ctglab.nl and to create
 **Content**
 
 The repository include two examples:
-* list_gene_symbol: 146 epilepsy risk genes with output (FUMA_gene2func35125.zip) resulting from GENE2FUNC 
-* SNP GWA association study summary stastistic  from schizrophrenia case-control study (https://www.nature.com/articles/s41588-018-0059-2.pdf) with output (FUMA_job70399.zip) resulting from SNP2GENE
+* `list_gene_symbol`: 146 epilepsy risk genes with output (FUMA_gene2func35125.zip) resulting from GENE2FUNC 
+* `scz_2018.tar.gz` SNP GWA association study summary stastistic from schizrophrenia case-control study (https://www.nature.com/articles/s41588-018-0059-2.pdf) with output (FUMA_job70399.zip) resulting from SNP2GENE
 
 ## Cytoscape: Complex networks visualisation
 
@@ -84,9 +83,24 @@ https://drive.google.com/open?id=1wDFoldeFf8JjiWRhc2IjEtKhZ0nVtFwp
 
 ## References
 
-This directory included all the cited articles
+* `DAPPLE publication`: Proteins Encoded in Genomic Regions Associated with Immune-Mediated Disease Physically Interact and Suggest Underlying Biology https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1001273
 
-* `LDSCORE publication` : Heritability enrichment of specifically expressed genes identifies disease-relevant tissues and cell types
-https://www.nature.com/articles/s41588-018-0081-4
+* `GOnet publication`: GOnet: a tool for interactive Gene Ontology analysis https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-018-2533-3
+
+* `FUMA publication`: Functional mapping and annotation of genetic associations with FUMA 
+https://www.nature.com/articles/s41467-017-01261-5
+
+* `Cytoscape publication`: Cytoscape: A Software Environment for Integrated Models of Biomolecular Interaction Networks
+https://genome.cshlp.org/content/13/11/2498.long
+
+* `PLN publication`: Unbiased Functional Clustering of Gene Variants with a Phenotypic-Linkage Network
+https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003815
+
+* `T2D PLN publication`: Diverse type 2 diabetes genetic risk factors functionally converge in a phenotype-focused gene network
+https://journals.plos.org/ploscompbiol/article/figures?id=10.1371/journal.pcbi.1005816
+
+
+
+
 
 
