@@ -1,9 +1,10 @@
-# DRI Informatics Network Workshop
-Material for the Informatics Workshop 28/02/2020
+# DRI Functional Genomics Workshop
 
-This repository contains all the material regarding the Bioinformatic Workshop including:
+Material for the Functional Genomics Workshop 28/02/2020
 
-* the material or code of 5 of 6 Demos: DAPPLE, GONet, FUMA, Rpln
+This repository contains all the material regarding the Functional Genomics Workshop including:
+
+* the material or code of 5 of 6 Demos: DAPPLE, GONet, FUMA, PLN
 * the slides: Workshop_Functional_Genomics_28_02_2019.pptx
 * the articles listed in this worskhop (PMID used as name): references 
 
