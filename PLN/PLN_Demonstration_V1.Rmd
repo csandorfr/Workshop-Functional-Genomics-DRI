@@ -1,0 +1,125 @@
+---
+title: "Phenotypic Linkage Network Demonstration"
+author: "Cynthia Sandor & Viola Volpato"
+date: 'Last update: `r date()`'
+output:
+  html_document:
+    fig_height: 5
+    fig_width: 20
+    theme: cerulean
+    toc: yes
+    toc_float:
+      collapsed: yes
+      smooth_scroll: yes
+      toc_depth: 5
+  pdf_document:
+    toc: yes
+---
+
+## Sept up your work environnement
+
+To evaluate a  the phenotypic linkage network you must:
+
+1) Install some R/Bioconductor package
+2) Indicate a directory where you will download PLN directory (require ~10Gb on your disk)
+3) Indicate a list of genes (format gene symbol)
+
+### The following package must to be installed
+
+You must install the following packages and load them.
+To install a general R package you must type: install.packages("gridExtra")
+To install a Bioconductor R package you must type: BiocManager::install("biomaRt"). 
+You must install before BiocManager: install.packages("BiocManager")
+
+```{r load the required package,echo=FALSE}
+library(biomaRt)
+library(ggplot2)
+library(gridExtra)
+library(DT)
+library(biomaRt)
+library(igraph)
+library(ggnetwork)
+library(network)
+```
+
+### Work directory
+
+You must indicate a work directory where the PLN file will be downloaded
+
+```{r work directory,echo=FALSE}
+dir_work<-"/Users/dpag0499/OneDrive - Cardiff University/Documents/PROJECTS/PLN_Demo_Workshop/test"
+dir_pln<-"/Users/dpag0499/OneDrive - Cardiff University/Documents/PROJECTS/PLN_Demo_Workshop/src/Rscripts/clustering_analysis"
+```
+
+You must download the following tar.gz including all the PLN file in your work directory:
+[pln.tar.gz](https://drive.google.com/open?id=1wDFoldeFf8JjiWRhc2IjEtKhZ0nVtFwp)
+
+```{r untar the tar.gz,echo=FALSE}
+##untar(paste(dir_work,"/pln.tar","",sep=""))
+```
+### List of genes 
+
+You must specify where is your list of gene
+
+```{r list of genes,echo=FALSE}
+f_gene<-paste(dir_work,"/pln/list_gene_symbol",sep="")
+list_gene<-read.table(f_gene,h=F)
+DT::datatable(list_gene, rownames = TRUE, caption = "List of genes", escape = FALSE, extensions = 'Buttons', options = list(dom = 'ftipr'))
+```
+
+### Set up the parameters
+
+Here the parameters requiry to evaluate the functional links between your list of genes by using PLN
+
+```{r parameters,echo=FALSE}
+parameters<-list()
+parameters[["nb_gene"]]<-100
+parameters[["nb_links"]]<-1000000
+parameters[["f_size"]]<-paste(dir_work,"/pln/hs_68_cds_max_mean_length",sep="")
+parameters[["f_pln"]]<-paste(dir_work,"/pln/wl_general.final.scale.ord",sep="")
+parameters[["f_gene"]]<-f_gene
+parameters[["nb_sim"]]<-100
+parameters[["f_list_dataset"]]<-paste(dir_work,"/pln/list_file_rescore_wl_info_wl.general",sep="")
+parameters[["dir_data"]]<-paste(dir_work,"/pln",sep="")
+df_parameters<-data.frame("Parameter"=names(unlist(parameters)),"Value"=unlist(parameters))
+DT::datatable(list_gene, rownames = TRUE, caption = "List of genes", escape = FALSE, extensions = 'Buttons', options = list(dom = 'ftipr'))
+```
+
+### Functional dataset used 
+
+We used the final linkage network build with the following dataset
+
+```{r list dataset,echo=FALSE}
+  
+  # get info links dataset
+  info_dataset<-read.table(parameters[["f_list_dataset"]],h=F)
+  colnames(info_dataset)<-c("File","Type","Coverage")
+  DT::datatable(info_dataset, rownames = TRUE, caption = "List of dataset", escape = FALSE, extensions = 'Buttons', options = list(dom = 'ftipr'))
+  
+```
+
+## Functionnal Clustering
+
+We run a Rscript to evaluate and represent the functional relationship between gene set.
+There are two part displayed in two different plot:
+
+Plot1: Histogramm
+
+We evaluates whether a given set of genes demonstrate unusually similar functionality. It examines the extent to which those genes cluster within the PLN. For this, it compares the sum of weighted links observed between
+these genes as compared to an equal number of random genes and computes an empirical p-value. As the
+coding-sequence (CDS) length and the network connectivity (degree) can bias functional network
+associations, the randomized genes are matched in CDS length and the degree to the original genes.
+
+
+Plot2: Gene network representation
+
+It extracts the most contributing resources, among the integrated datasets to build a PLN, for any functional associations found; (3) represents the extracted subnetwork with links colored by the most contributing resource.
+
+
+```{r run fonctional analysis,echo=FALSE}
+
+setwd(dir_pln)
+source("functional_clustering_analysis_p.R")
+functional_clustering_analysis(parameters)
+```
+
