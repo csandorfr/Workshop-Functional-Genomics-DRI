@@ -76,7 +76,7 @@ install.packages("BiocManager")
 BiocManager::install("biomaRt")
 ```
 
-**Download PLN dataset"
+**Download PLN dataset**
 
 You will need to download the PLN dataset and the final PLN here:
 https://drive.google.com/open?id=1wDFoldeFf8JjiWRhc2IjEtKhZ0nVtFwp
