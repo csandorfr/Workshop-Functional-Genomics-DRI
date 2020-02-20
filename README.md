@@ -4,7 +4,7 @@ Material for the Functional Genomics Workshop 28/02/2020
 
 This repository contains all the material regarding the Functional Genomics Workshop including:
 
-* the material and the code of 5 of 6 Demos: DAPPLE, GONet, FUMA, PLN
+* the material and the code of 5 of 6 Demos: DAPPLE, GONet, FUMA, Cytoscape, PLN
 * the slides:  `Workshop_Functional_Genomics_28_02_2019.pptx`
 
 ## DAPPLE: Protein-Protein Interactions Network
@@ -46,13 +46,14 @@ The repository include two examples:
 **Instructions**
 
 To use Cytoscape, you need to download and install Cytoscape via this URL: https://cytoscape.org/download.html
+You will need to install the following applications (app manager tab): CytoCluster, BINGO
 
 **Content**
 
 The repository include two examples:
 
 * `sub_net_nervous_info_gene.txt` a gene sub-network of ~ 2500 genes build by using multiple of functional annotation (see section phenotypic linkage network)
-* a cytoscape network:  `Costanzo_Science_2010.cys`
+* `Costanzo_Science_2010.cys`: a cytoscape network
 
 
 ## PLN: Phenotypic Linkage Network
