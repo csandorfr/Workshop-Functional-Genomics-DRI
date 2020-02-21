@@ -16,17 +16,16 @@ output:
     toc: yes
 ---
 
-## Sept up your work environnement
+## Set up your work environnement
 
-To evaluate a  the phenotypic linkage network you must:
+To evaluate a phenotypic linkage network you must:
 
-1) Install some R/Bioconductor package
-2) Indicate a directory where you will download PLN directory (require ~10Gb on your disk)
+1) Install some R/Bioconductor packages
+2) Indicate a directory where you will download PLN data (require ~10Gb on your disk)
 3) Indicate a list of genes (format gene symbol)
 
-### The following package must to be installed
+### The following packages must be installed and loaded
 
-You must install the following packages and load them.
 To install a general R package you must type: install.packages("gridExtra")
 To install a Bioconductor R package you must type: BiocManager::install("biomaRt"). 
 You must install before BiocManager: install.packages("BiocManager")
@@ -36,7 +35,6 @@ library(biomaRt)
 library(ggplot2)
 library(gridExtra)
 library(DT)
-library(biomaRt)
 library(igraph)
 library(ggnetwork)
 library(network)
@@ -44,7 +42,7 @@ library(network)
 
 ### Work directory
 
-You must indicate a work directory where the PLN file will be downloaded
+You must indicate a work directory where the PLN files will be downloaded
 
 ```{r work directory,echo=FALSE}
 dir_work<-"/Users/dpag0499/OneDrive - Cardiff University/Documents/PROJECTS/PLN_Demo_Workshop/test"
@@ -59,7 +57,7 @@ You must download the following tar.gz including all the PLN file in your work d
 ```
 ### List of genes 
 
-You must specify where is your list of gene
+You must specify where your list of genes is
 
 ```{r list of genes,echo=FALSE}
 f_gene<-paste(dir_work,"/pln/list_gene_symbol",sep="")
@@ -69,7 +67,7 @@ DT::datatable(list_gene, rownames = TRUE, caption = "List of genes", escape = FA
 
 ### Set up the parameters
 
-Here the parameters requiry to evaluate the functional links between your list of genes by using PLN
+Here are the parameters required to evaluate the functional links between your list of genes by using PLN
 
 ```{r parameters,echo=FALSE}
 parameters<-list()
@@ -87,7 +85,7 @@ DT::datatable(list_gene, rownames = TRUE, caption = "List of genes", escape = FA
 
 ### Functional dataset used 
 
-We used the final linkage network build with the following dataset
+We used the final linkage network built with the following datasets
 
 ```{r list dataset,echo=FALSE}
   
@@ -100,20 +98,20 @@ We used the final linkage network build with the following dataset
 
 ## Functionnal Clustering
 
-We run a Rscript to evaluate and represent the functional relationship between gene set.
-There are two part displayed in two different plot:
+We run an Rscript to evaluate and represent the functional relationship between genes.
+There are two parts displayed in two different plots:
 
 Plot1: Histogramm
 
-We evaluates whether a given set of genes demonstrate unusually similar functionality. It examines the extent to which those genes cluster within the PLN. For this, it compares the sum of weighted links observed between
-these genes as compared to an equal number of random genes and computes an empirical p-value. As the
+We evaluate whether a given set of genes demonstrates unusually similar functionality by examining the extent to which those genes cluster within the PLN. For this, we compare the sum of weighted links observed between
+these genes and between an equal number of random genes and we compute an empirical p-value (shown in the plot). As the
 coding-sequence (CDS) length and the network connectivity (degree) can bias functional network
-associations, the randomized genes are matched in CDS length and the degree to the original genes.
+associations, the randomized genes are matched on CDS length and on the degree to the original genes.
 
 
 Plot2: Gene network representation
 
-It extracts the most contributing resources, among the integrated datasets to build a PLN, for any functional associations found; (3) represents the extracted subnetwork with links colored by the most contributing resource.
+We extract the most contributing resources, among the integrated datasets to build a PLN, for any functional associations found; (3) represents the extracted subnetwork with links colored by the most contributing resources.
 
 
 ```{r run fonctional analysis,echo=FALSE}
