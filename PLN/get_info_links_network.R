@@ -20,7 +20,7 @@ get_info_links_network<-function(f_list_dataset,dir_data,list_gene_ens,info_gene
   info_gene_pln_sub<-info_gene_pln[index_gene,]
   
   # get individual dataset
-  rm(info_pln_ind)
+#  rm(info_pln_ind)
   for (i in c(1:dim(info_dataset)[1])) {
     file<-paste(dir_data,"/",info_dataset$File[i],sep="")
     info_temp<-read.table(file,h=F)

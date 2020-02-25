@@ -48,8 +48,8 @@ You must indicate a work directory where the PLN files will be downloaded
 #dir_work<-"/Users/dpag0499/OneDrive - Cardiff University/Documents/PROJECTS/PLN_Demo_Workshop/test"
 #dir_pln<-"/Users/dpag0499/OneDrive - Cardiff University/Documents/PROJECTS/PLN_Demo_Workshop/src/Rscripts/clustering_analysis"
 
-dir_work<-"where_you_downloaded_PLN_files"
-dir_pln<-"where_you_downloaded_PLN_Github"
+dir_work<-"~/Desktop/WORK/WORKSHOPS/"
+dir_pln<-"~/Desktop/WORK/WORKSHOPS/Workshop-Functional-Genomics-DRI/PLN/"
 
 
 ```
@@ -122,7 +122,7 @@ We extract the most contributing resources, among the integrated datasets to bui
 
 ```{r run fonctional analysis,echo=FALSE}
 
-setwd(dir_pln)
+#setwd(dir_pln)
 source("functional_clustering_analysis_p.R")
 functional_clustering_analysis(parameters)
 ```
