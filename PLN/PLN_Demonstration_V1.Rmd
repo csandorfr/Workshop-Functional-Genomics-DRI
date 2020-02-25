@@ -45,8 +45,13 @@ library(network)
 You must indicate a work directory where the PLN files will be downloaded
 
 ```{r work directory,echo=FALSE}
-dir_work<-"/Users/dpag0499/OneDrive - Cardiff University/Documents/PROJECTS/PLN_Demo_Workshop/test"
-dir_pln<-"/Users/dpag0499/OneDrive - Cardiff University/Documents/PROJECTS/PLN_Demo_Workshop/src/Rscripts/clustering_analysis"
+#dir_work<-"/Users/dpag0499/OneDrive - Cardiff University/Documents/PROJECTS/PLN_Demo_Workshop/test"
+#dir_pln<-"/Users/dpag0499/OneDrive - Cardiff University/Documents/PROJECTS/PLN_Demo_Workshop/src/Rscripts/clustering_analysis"
+
+dir_work<-"where_you_downloaded_PLN_files"
+dir_pln<-"where_you_downloaded_PLN_Github"
+
+
 ```
 
 You must download the following tar.gz including all the PLN file in your work directory:
@@ -54,6 +59,7 @@ You must download the following tar.gz including all the PLN file in your work d
 
 ```{r untar the tar.gz,echo=FALSE}
 ##untar(paste(dir_work,"/pln.tar","",sep=""))
+## ADVICE FOR Windows Users!
 ```
 ### List of genes 
 
