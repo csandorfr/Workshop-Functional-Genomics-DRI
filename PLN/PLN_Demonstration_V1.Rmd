@@ -91,7 +91,7 @@ We used the final linkage network built with the following datasets
   
   # get info links dataset
   info_dataset<-read.table(parameters[["f_list_dataset"]],h=F)
-  colnames(info_dataset)<-c("File","Type","Coverage")
+  colnames(info_dataset)<-c("File","Type")
   DT::datatable(info_dataset, rownames = TRUE, caption = "List of dataset", escape = FALSE, extensions = 'Buttons', options = list(dom = 'ftipr'))
   
 ```
