@@ -48,8 +48,8 @@ You must indicate a work directory where the PLN files will be downloaded
 #dir_work<-"/Users/dpag0499/OneDrive - Cardiff University/Documents/PROJECTS/PLN_Demo_Workshop/test"
 #dir_pln<-"/Users/dpag0499/OneDrive - Cardiff University/Documents/PROJECTS/PLN_Demo_Workshop/src/Rscripts/clustering_analysis"
 
-dir_work<-"~/Desktop/WORK/WORKSHOPS/"
-dir_pln<-"~/Desktop/WORK/WORKSHOPS/Workshop-Functional-Genomics-DRI/PLN/"
+dir_work<-"~/Desktop/DRI_WORKSHOP/PLN_data/"
+dir_pln<-"~/Desktop/DRI_WORKSHOP/Workshop-Functional-Genomics-DRI/PLN/"
 
 
 ```
