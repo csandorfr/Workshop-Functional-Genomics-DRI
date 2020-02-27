@@ -99,6 +99,14 @@ https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003815
 * `T2D PLN publication`: Diverse type 2 diabetes genetic risk factors functionally converge in a phenotype-focused gene network
 https://journals.plos.org/ploscompbiol/article/figures?id=10.1371/journal.pcbi.1005816
 
+* `WGCNA`: WGCNA: an R package for weighted correlation network analysis
+https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-9-559
+
+* `WGCNA`: WGCNA: an R package for weighted correlation network analysis
+https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-9-559
+
+* `DiffCoEx`: DiffCoEx: a simple and sensitive method to find differentially coexpressed gene modules
+https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-9-559
 
 
 
