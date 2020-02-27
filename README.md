@@ -102,11 +102,8 @@ https://journals.plos.org/ploscompbiol/article/figures?id=10.1371/journal.pcbi.1
 * `WGCNA`: WGCNA: an R package for weighted correlation network analysis
 https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-9-559
 
-* `WGCNA`: WGCNA: an R package for weighted correlation network analysis
-https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-9-559
-
 * `DiffCoEx`: DiffCoEx: a simple and sensitive method to find differentially coexpressed gene modules
-https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-9-559
+https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-11-497
 
 
 
