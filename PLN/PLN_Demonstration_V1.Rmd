@@ -45,8 +45,13 @@ library(network)
 You must indicate a work directory where the PLN files will be downloaded
 
 ```{r work directory,echo=FALSE}
-dir_work<-"/Users/dpag0499/OneDrive - Cardiff University/Documents/PROJECTS/PLN_Demo_Workshop/test"
-dir_pln<-"/Users/dpag0499/OneDrive - Cardiff University/Documents/PROJECTS/PLN_Demo_Workshop/src/Rscripts/clustering_analysis"
+#dir_work<-"/Users/dpag0499/OneDrive - Cardiff University/Documents/PROJECTS/PLN_Demo_Workshop/test"
+#dir_pln<-"/Users/dpag0499/OneDrive - Cardiff University/Documents/PROJECTS/PLN_Demo_Workshop/src/Rscripts/clustering_analysis"
+
+dir_work<-"~/Desktop/DRI_WORKSHOP/PLN_data/"
+dir_pln<-"~/Desktop/DRI_WORKSHOP/Workshop-Functional-Genomics-DRI/PLN/"
+
+
 ```
 
 You must download the following tar.gz including all the PLN file in your work directory:
@@ -54,6 +59,7 @@ You must download the following tar.gz including all the PLN file in your work d
 
 ```{r untar the tar.gz,echo=FALSE}
 ##untar(paste(dir_work,"/pln.tar","",sep=""))
+## ADVICE FOR Windows Users!
 ```
 ### List of genes 
 
@@ -91,7 +97,7 @@ We used the final linkage network built with the following datasets
   
   # get info links dataset
   info_dataset<-read.table(parameters[["f_list_dataset"]],h=F)
-  colnames(info_dataset)<-c("File","Type","Coverage")
+  colnames(info_dataset)<-c("File","Type")
   DT::datatable(info_dataset, rownames = TRUE, caption = "List of dataset", escape = FALSE, extensions = 'Buttons', options = list(dom = 'ftipr'))
   
 ```
@@ -116,7 +122,7 @@ We extract the most contributing resources, among the integrated datasets to bui
 
 ```{r run fonctional analysis,echo=FALSE}
 
-setwd(dir_pln)
+#setwd(dir_pln)
 source("functional_clustering_analysis_p.R")
 functional_clustering_analysis(parameters)
 ```
